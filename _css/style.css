@@ -1,0 +1,32 @@
+body {
+    background: rgb(84, 169, 255);
+    font: normal 14pt Arial;
+    text-align: center;
+}
+
+section {
+    background: white;
+    width: 300px;
+    height: 200px;
+    padding: 5px;
+    margin: auto;
+}
+
+input#txtPokeId {
+    width: 239px;
+    height: 19px;
+}
+
+input[type=button] {
+    height: 25px;
+    background: white;
+    border-radius: 3px;
+    border-width: 1px;
+    box-shadow: 1px 2px black;
+    cursor: pointer;
+}
+
+input[type=button]:active {
+    box-shadow: 0px 0px black;
+    transform: translateY(1px);
+}
