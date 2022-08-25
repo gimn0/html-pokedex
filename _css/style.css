@@ -1,32 +1,69 @@
 body {
-    background: rgb(84, 169, 255);
+    background: #dc0a2d;
     font: normal 14pt Arial;
     text-align: center;
 }
 
-section {
+section#dex {
+    background: #dedede;
+    width: 300px;
+    height: auto;
+    padding: 10px;
+    padding-bottom: 1px;
+    margin: auto;
+    border-radius: 5px;
+    box-shadow: 2px 3px #715c61;
+}
+
+section#dexScreen {
     background: white;
     width: 300px;
     height: 200px;
-    padding: 5px;
-    margin: auto;
+    border-radius: 10px;
 }
 
-input#txtPokeId {
-    width: 239px;
-    height: 19px;
+p#pokeName {
+    padding-top: 10px;
+}
+
+input#searchInput {
+    width: 250px;
+    height: 24px;
+    text-align: center;
+    border-width: 1px;
+    border-radius: 3px;
+    border-color: #dedede;
 }
 
 input[type=button] {
     height: 25px;
-    background: white;
+    background: #28aafe;
+    color: white;
+    text-align: center;
     border-radius: 3px;
     border-width: 1px;
-    box-shadow: 1px 2px black;
+    border-color: #28aafe;
+    box-shadow: 1px 2px #19699e;
     cursor: pointer;
 }
 
+input#btnSearch {
+    width: 35px;
+}
+
+input#btnPrevious {
+    width: 145px;
+}
+
+input#btnNext {
+    width: 145px;
+}
+
 input[type=button]:active {
-    box-shadow: 0px 0px black;
+    box-shadow: 0px 0px #19699e;
     transform: translateY(1px);
+}
+
+footer {
+    padding-top: 10px;
 }
