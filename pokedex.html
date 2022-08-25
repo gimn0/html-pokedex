@@ -8,10 +8,17 @@
     <link rel="stylesheet" href="_css/style.css">
 </head>
 <body>
-    <section>
+    <section id="dex">
+        <section id="dexScreen">
+            <div>
+                <p id="pokeName">
+                    
+                </p>
+            </div>
+        </section>
         <div>
             <p>
-                <input type="text" id="txtPokeId" placeholder="Digite o nome ou o número do Pokémon">
+                <input type="text" id="txtPoke" placeholder="Digite o nome ou o número do Pokémon">
                 <input type="button" id="btnSearch" value="&#x1F50E;&#xFE0E;" onclick="Procurar()">
             </p>
             <p>
@@ -19,12 +26,9 @@
                 <input type="button" id="btnNext" value=">" onclick="Proximo()">
             </p>
         </div>
-        <div>
-
-        </div>
     </section>
     <footer>
-        <a href="https://github.com/gimn0">&copy;gimn0</a>
+        <a href="https://github.com/gimn0" target="_blank">&copy;gimn0</a>
     </footer>
     <script src="_javascript/script.js"></script>
 </body>
