@@ -1,7 +1,9 @@
 body {
-    background: #dc0a2d;
+    background: linear-gradient(to bottom, #dc0a2d, #fe3354);
     font: normal 14pt Arial;
     text-align: center;
+    margin-top: 10%;
+    min-height: 100vh;
 }
 
 section#dex {
@@ -9,7 +11,6 @@ section#dex {
     width: 300px;
     height: auto;
     padding: 10px;
-    padding-bottom: 1px;
     margin: auto;
     border-radius: 5px;
     box-shadow: 2px 3px #715c61;
@@ -66,4 +67,14 @@ input[type=button]:active {
 
 footer {
     padding-top: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #28aafe;
 }
