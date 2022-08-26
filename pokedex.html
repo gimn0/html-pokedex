@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pokedex</title>
+    <title>Pokédex</title>
     <link rel="icon" href="_favicons/pokedex_button.png">
     <link rel="stylesheet" href="_css/style.css">
 </head>
@@ -12,14 +12,15 @@
     <section id="dex">
         <section id="dexScreen">
             <div>
-                <p id="pokeName">
-                    
-                </p>
+                <img src="#" alt="pokemon" id="pokeImage">
+            </div>
+            <div>
+                <span id="pokeNumber"></span> - <span id="pokeName"></span>
             </div>
         </section>
         <div>
             <p>
-                <input type="text" id="searchInput" spellcheck="false" placeholder="Digite o nome ou o número do Pokémon">
+                <input type="text" id="searchInput" spellcheck="false" placeholder="Name or Number">
                 <input type="button" id="btnSearch" value="&#x1F50E;&#xFE0E;" onclick="Search()">
             </p>
             <p>
@@ -29,7 +30,7 @@
         </div>
     </section>
     <footer>
-        <a href="https://github.com/gimn0" target="_blank">&copy;gimn0</a>
+        <a href="https://github.com/gimn0" target="_blank" rel="noreferrer" rel="noopener">&copy;gimn0</a>
     </footer>
     <script src="_javascript/script.js"></script>
 </body>

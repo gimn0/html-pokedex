@@ -1,20 +1,63 @@
-function Search() {
-    let pokeInput = window.document.querySelector('input#searchInput').value
-    let name = window.document.querySelector('p#pokeName')
+const pokeNumber = document.querySelector('span#pokeNumber')
+const pokeName = document.querySelector('span#pokeName')
+const pokeImage = document.querySelector('img#pokeImage')
+const input = window.document.querySelector('input#searchInput')
+const rng = Math.floor((Math.random() * 649) + 1) // random number generator, o maior número é 
+                                                  // 649 pois é o último pokémon da national dex da gen 5. 
+
+const fetchPokemon = async (pokemon) => {
+    const APIResponse = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon.toLowerCase()}`)
     
-    if ( pokeInput.length < 1) {
-        window.alert("[ERRO] pokeInput.lenght < 1")
+    if ( APIResponse.status ===  200 ) {
+        const data = await APIResponse.json()
+        return data
+    }
+}
+
+const renderPokemon = async (pokemon) => {
+    pokeNumber.innerHTML = ''
+    pokeName.innerHTML = 'Loading...'
+
+    const data = await fetchPokemon(pokemon)
+
+    if ( data ) {
+        pokeNumber.innerHTML = data.id
+        pokeName.innerHTML = data.name
+        
+        const rngShiny = Math.floor((Math.random() * 4096) + 1)
+        console.log("Shiny probability: " + rngShiny)
+        if(rngShiny === 1) {
+            pokeImage.src = data['sprites']['versions']['generation-v']['black-white']['animated']['front_shiny']
+        } else {
+            pokeImage.src = data['sprites']['versions']['generation-v']['black-white']['animated']['front_default']
+        }
+
+        input.value = ''
+    } else {
+        pokeName.innerHTML = 'Not found.'
     }
 
-    name.innerHTML = `${pokeInput}`
+}
+
+function Search() {
+    let pokeInput = input.value
+    
+    if ( pokeInput.length < 1) {
+        renderPokemon(`${rng}`)
+    }
+
+    renderPokemon(pokeInput)
+
+    input.focus()
 }
 
 function Previous() {
-    let name = window.document.querySelector('p#pokeName')
-    name.innerHTML = "Testando Anterior..."
+    pokeName.innerHTML = "Testando Anterior..."
 }
 
 function Next() {
-    let name = window.document.querySelector('p#pokeName')
-    name.innerHTML = "Testando Proximo..."
+    pN = Number( `${pokeNumber + 1}` )
+    renderPokemon(`${pN + 1}`)
 }
+
+renderPokemon(`${rng}`) // Mostra um pokemon com o numero aletorio passado
