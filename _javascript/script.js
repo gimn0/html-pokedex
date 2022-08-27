@@ -4,7 +4,7 @@ const pokeImage = document.querySelector('#pokeImage')
 const input = window.document.querySelector('#searchInput')
 const rng = Math.floor((Math.random() * 649) + 1) // random number generator, o maior número é 
                                                   // 649 pois é o último pokémon da national dex da gen 5. 
-let indexPokemon = rng
+let indexPokemon = rng // variavel para as funçoes previous e next
 
 const fetchPokemon = async (pokemon) => {
     const APIResponse = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon.toLowerCase()}`)
@@ -26,8 +26,8 @@ const renderPokemon = async (pokemon) => {
         pokeNumber.innerHTML = data.id
         pokeName.innerHTML = data.name
         
-        const rngShiny = Math.floor((Math.random() * 4096) + 1)
-        console.log("Shiny probability: " + rngShiny)
+        const rngShiny = Math.floor((Math.random() * 4096) + 1) // variavel para aparecer o sprite shiny do pokemon
+        // console.log("Shiny probability: " + rngShiny)
         if(rngShiny === 1) {
             pokeImage.src = data['sprites']['versions']['generation-v']['black-white']['animated']['front_shiny']
         } else {
@@ -60,7 +60,7 @@ function Search() {
 
 function Previous() {
     if ( indexPokemon <= 1 ) {
-        indexPokemon = 649
+        indexPokemon = 649 // Vai para o ultimo pokemon disponivel na national dex da gen 5
         return renderPokemon('649')
     }
     
@@ -70,7 +70,7 @@ function Previous() {
 
 function Next() {
     if ( indexPokemon >= 649 ) {
-        indexPokemon = 1
+        indexPokemon = 1 // Vai para o primeiro pokemon disponivel na national dex
         return renderPokemon('1')
     }
     
