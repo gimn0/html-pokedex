@@ -1,3 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Titillium Web', sans-serif;
+}
 body {
     background: linear-gradient(to bottom, #dc0a2d, #fe3354);
     font: normal 14pt Arial;
@@ -10,7 +18,7 @@ section#dex {
     background: #dedede;
     width: 100%;
     max-width: 300px;
-    height: auto;
+    max-height: auto;
     padding: 10px;
     margin: auto;
     border-radius: 5px;
@@ -20,12 +28,18 @@ section#dex {
 section#dexScreen {
     background: white;
     width: 100%;
-    height: 240px;
+    height: 235px;
+    margin-bottom: 15px;
     border-radius: 10px;
 }
 
-.screen {
+.screen_image {
     position: relative;
+}
+
+.screen_text {
+    position: relative;
+    bottom: 5%;
 }
 
 img#pokeImage {
@@ -37,11 +51,8 @@ img#pokeImage {
 }
 
 .pokemon_dados {
-    padding-top: 5px;
-    position: absolute;
     font-weight: 600;
-    top: 85%;
-    right: auto;
+    text-align: center;
     font-size: clamp(8px, 5vw, 25px);
 }
 
@@ -59,7 +70,7 @@ img#pokeImage {
 
 input#searchInput {
     width: 84%;
-    height: 24px;
+    height: 25px;
     text-align: center;
     border-width: 1px;
     border-radius: 3px;
@@ -83,10 +94,14 @@ input#btnSearch {
 }
 
 input#btnPrevious {
+    margin-top: 10px;
+    margin-bottom: 10px;
     width: 49%;
 }
 
 input#btnNext {
+    margin-top: 10px;
+    margin-bottom: 10px;
     width: 49%;
 }
 
