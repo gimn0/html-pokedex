@@ -14,12 +14,14 @@
             <div class="screen">
                 <img src="_imagens/pokemon_background.png" alt="background" id="poke_background">
                 <img src="#" alt="pokemon" id="pokeImage">
-                <span id="pokeNumber"></span> - <span id="pokeName"></span>
+                <h2 class="pokemon_dados">
+                    <span id="pokeNumber"></span> - <span id="pokeName"></span>
+                </h2>
             </div>
         </section>
         <div>
             <p>
-                <input type="text" id="searchInput" spellcheck="false" placeholder="Name or Number">
+                <input type="search" id="searchInput" spellcheck="false" placeholder="Name or Number" required>
                 <input type="button" id="btnSearch" value="&#x1F50E;&#xFE0E;" onclick="Search()">
             </p>
             <p>

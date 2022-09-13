@@ -8,7 +8,8 @@ body {
 
 section#dex {
     background: #dedede;
-    width: 24%;
+    width: 100%;
+    max-width: 300px;
     height: auto;
     padding: 10px;
     margin: auto;
@@ -19,13 +20,8 @@ section#dex {
 section#dexScreen {
     background: white;
     width: 100%;
-    height: 50%;
+    height: 240px;
     border-radius: 10px;
-}
-
-p#pokeName {
-    padding-top: 10px;
-    
 }
 
 .screen {
@@ -34,14 +30,28 @@ p#pokeName {
 
 img#pokeImage {
     top: 30%;
-    left: 35%;
-    width: 30%;
+    left: 55%;
+    height: 40%;
+    transform: translate(-63%, 20%);
     position: absolute;
 }
 
-img#poke_background {
+.pokemon_dados {
+    padding-top: 5px;
+    position: absolute;
+    font-weight: 600;
+    top: 85%;
+    right: auto;
+    font-size: clamp(8px, 5vw, 25px);
+}
+
+#pokeName {
+    text-transform: capitalize;
+}
+
+#poke_background {
     width: 96%;
-    height: 200px;
+    max-height: 200px;
     position: relative;
     padding-top: 5px;
     border-radius: 15px;
