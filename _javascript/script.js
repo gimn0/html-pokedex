@@ -25,6 +25,7 @@ const renderPokemon = async (pokemon) => {
         pokeImage.style.display = 'block'
         pokeNumber.innerHTML = data.id
         pokeName.innerHTML = data.name
+        indexPokemon = data.id
         
         const rngShiny = Math.floor((Math.random() * 4096) + 1) // variavel para aparecer o sprite shiny do pokemon
         // console.log("Shiny probability: " + rngShiny)
@@ -46,10 +47,10 @@ function Search() {
     let pokeInput = input.value
     
     if ( pokeInput.length < 1) {
-        renderPokemon(`${rng}`)
+        return renderPokemon(`${rng}`)
     } else if ( pokeInput < 1 || pokeInput > 649 ) {
         pokeNumber.innerHTML = ''
-        return pokeName.innerHTML =  'Only gen 5 National Dex Pokémon.'
+        return pokeName.innerHTML = 'Only up to gen 5.'
     }
 
     renderPokemon(pokeInput)
