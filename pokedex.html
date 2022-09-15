@@ -1,40 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pokédex</title>
-    <link rel="icon" href="_favicons/pokedex_button.png">
-    <link rel="stylesheet" href="_css/style.css">
-</head>
-<body>
-    <section id="dex">
-        <section id="dexScreen">
-            <div class="screen_image">
-                <img src="_imagens/pokemon_background.png" alt="background" id="poke_background">
-                <img src="#" alt="pokemon" id="pokeImage">
-            </div>
-            <div class="screen_text">
-                <h2 class="pokemon_dados">
-                    <span id="pokeNumber"></span> - <span id="pokeName"></span>
-                </h2>
-            </div>
-        </section>
-        <div>
-            <p>
-                <input type="search" id="searchInput" spellcheck="false" placeholder="Name or Number" required>
-                <input type="button" id="btnSearch" value="&#x1F50E;&#xFE0E;" onclick="Search()">
-            </p>
-            <p>
-                <input type="button" id="btnPrevious" value="<" onclick="Previous()">
-                <input type="button" id="btnNext" value=">" onclick="Next()">
-            </p>
-        </div>
-    </section>
-    <footer>
-        <a href="https://github.com/gimn0" target="_blank" rel="noreferrer" rel="noopener">&copy;gimn0</a>
-    </footer>
-    <script src="_javascript/script.js"></script>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pokédex</title>
+        <link rel="icon" href="_favicons/pokedex_button.png">
+        <link rel="stylesheet" href="_css/style.css">
+    </head>
+    <body>
+        <main>
+            <section id="dex">
+                <section id="dexScreen">
+                    <div class="screen_image">
+                        <img src="_imagens/pokemon_background.png" alt="background" id="poke_background">
+                        <img src="#" alt="pokemon" id="pokeImage">
+                    </div>
+                    <div class="screen_text">
+                        <h2 class="pokemon_dados">
+                            <span id="pokeNumber"></span> - <span id="pokeName"></span>
+                        </h2>
+                    </div>
+                </section>
+                <div>
+                    <scan>
+                        <input type="search" id="searchInput" spellcheck="false" placeholder="Name or Number" required>
+                        <input type="button" id="btnSearch" value="&#x1F50E;&#xFE0E;" onclick="Search()">
+                    </scan>
+                    <p>
+                        <input type="button" id="btnPrevious" value="&lt;" onclick="Previous()">
+                        <input type="button" id="btnNext" value="&gt;" onclick="Next()">
+                    </p>
+                </div>
+            </section>
+            <footer>
+                <a href="https://github.com/gimn0" target="_blank" rel="noreferrer" rel="noopener">&copy;gimn0</a>
+            </footer>
+            <script src="_javascript/script.js"></script>
+        </main>
+    </body>
 </html>
