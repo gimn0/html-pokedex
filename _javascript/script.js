@@ -49,6 +49,16 @@ function Search() {
     if ( pokeInput.length < 1) {
         return renderPokemon(`${rng}`)
     } else if ( pokeInput < 1 || pokeInput > 649 ) {
+        pokeImage.style.display = 'block'
+        let rng_missingno = Math.floor((Math.random() * 100) + 1)
+        // console.log("MissingNo chance: " + rng_missingno)
+
+        if ( rng_missingno === 1 ) {
+            pokeImage.src = '_imagens/error_missingno.png'
+        } else {
+            pokeImage.src = '_imagens/error_question_mark.png'
+        }
+        
         pokeNumber.innerHTML = ''
         return pokeName.innerHTML = 'Only up to gen 5.'
     }
